@@ -1,0 +1,17 @@
+<section class="results">
+  <h1>Resultados Reais</h1>
+  
+  <div class="image-container">
+    <button class="nav-arrow nav-arrow-left" (click)="prevImage()" aria-label="Imagem anterior">
+      <span>&lt;</span>
+    </button>
+    
+    <div class="image-wrapper">
+      <img [src]="currentImage.src" [alt]="currentImage.alt">
+    </div>
+    
+    <button class="nav-arrow nav-arrow-right" (click)="nextImage()" aria-label="Próxima imagem">
+      <span>&gt;</span>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="clinic-services">
+  <h1>Conheça nossos serviços</h1>
+  
+  <section class="card-grid">
+    @for (card of cards; track card.id) {
+      <div class="card" (click)="toggleCard(card)" (mouseleave)="onCardMouseLeave(card)">
+        <img [src]="card.image" [alt]="card.name">
+        @if (selectedCard?.id === card.id) {
+          <div class="card-overlay">
+            <p class="card-overlay-description">{{ card.description }}</p>
+          </div>
+        }
+      </div>
+    }
+  </section>
+</section>

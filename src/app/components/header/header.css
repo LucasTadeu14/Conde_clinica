@@ -1,0 +1,85 @@
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #756D66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+}
+
+.nav-header a{
+  display: flex;
+  align-items: center;
+}
+
+.nav-link{
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-link a{
+  position: relative;
+  text-decoration: none;
+
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.nav-link a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;               
+  background-color: #C9B9AC;
+  transform: scaleX(0);    
+  transform-origin: right;   
+  transition: transform 0.3s ease;
+}
+
+.nav-link a:hover{
+  color: #C9B9AC;
+}
+
+.nav-link a:hover::after {
+  transform: scaleX(1); 
+  transform-origin: left;
+}
+
+.nav-header button,
+.nav-header .agendar-button {
+  padding: 10px 40px;
+  background: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 40px;
+
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 300;
+
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-header button:hover,
+.nav-header .agendar-button:hover {
+  background: #C9B9AC;
+  transition: ease 0.3s;
+  border-color: #C9B9AC;
+}
