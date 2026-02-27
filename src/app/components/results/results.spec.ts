@@ -120,7 +120,6 @@ describe('Results', () => {
 
   it('should update displayed image when prevImage is called', () => {
     if (component.images.length > 1) {
-      // Set initial state before first detectChanges
       component.currentIndex = 1;
       fixture.changeDetectorRef.detectChanges();
       

@@ -96,3 +96,35 @@
   transform: translateY(0);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
+@media (max-width: 1200px) {
+  .about{
+    height: 800px;
+  }
+
+  .about div{
+    width: 950px;
+  }
+
+  .about img{
+    height: 500px;
+  }
+
+  .about-content h3{
+    font-size: 30px;
+  }
+
+  .about-content p{
+    font-size: 15px;
+    margin-right: 20px;
+  }
+
+  .about-content{
+    gap: 1.5rem;
+  }
+
+  .about-content button,
+  .about-content .agendar-button{
+    margin-top: 20px;
+  }
+}

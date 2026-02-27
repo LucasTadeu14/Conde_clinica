@@ -56,6 +56,7 @@
 .barra-centro{
   display: flex;
   width: 1200px;
+  margin-left: 20px;
 
   gap: 3rem;
 }
@@ -76,8 +77,8 @@
   position: absolute;
   top: 1000px;
 
-  height: 800px;
-  width: 1200px;
+  max-height: 800px;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   gap: 5rem;
@@ -157,4 +158,49 @@
 .hero_2 .agendar-button:active {
   transform: translateY(0);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 1200px) {
+  .image{
+    max-height: 500px;
+    top: 375px;
+    right: 50px;
+    z-index: 1;
+  }
+
+  .hero img{
+    height: 100px;
+    left: 100px;
+  }
+
+  .barra{
+    top: 700px;
+  }
+
+  .element_1{
+    height: 50px;
+    right: 400px;
+    top: 420px;
+  }
+
+  .element_2{
+    height: 500px;
+    top: 350px;
+    right: 50px;
+  }
+
+  .barra-centro div{
+    font-size: 12px;
+  }
+
+  .hero_section_2{
+    width: 950px;
+    max-height: 800px;
+  }
+
+  .hero_section_2 img{
+    width: 400px;
+  }
+
 }

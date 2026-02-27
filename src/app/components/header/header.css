@@ -19,6 +19,7 @@
 .nav-header a{
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 .nav-link{
@@ -63,6 +64,7 @@
 .nav-header button,
 .nav-header .agendar-button {
   padding: 10px 40px;
+  margin-right: 20px;
   background: none;
   border: 1px solid #FFFFFF;
   border-radius: 40px;
@@ -82,4 +84,85 @@
   background: #C9B9AC;
   transition: ease 0.3s;
   border-color: #C9B9AC;
+}
+
+@media (max-width: 992px) {
+  .nav-header {
+    width: 95%;
+    padding: 0 20px;
+  }
+
+  .nav-link {
+    gap: 1rem;
+  }
+
+  .nav-link a {
+    font-size: 10px;
+  }
+
+  .nav-header button,
+  .nav-header .agendar-button {
+    padding: 8px 30px;
+    font-size: 13px;
+  }
+
+  .logo {
+    height: 28px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+
+  .nav-header {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .nav-link {
+    gap: 1rem;
+  }
+
+  .nav-link a {
+    font-size: 10px;
+  }
+
+  .nav-header button,
+  .nav-header .agendar-button {
+    padding: 6px 20px;
+    font-size: 12px;
+  }
+
+  .logo {
+    height: 26px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    height: 50px;
+  }
+
+  .nav-header {
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .nav-header button,
+  .nav-header .agendar-button {
+    padding: 5px 15px;
+    font-size: 11px;
+  }
+
+  .logo {
+    height: 24px !important;
+  }
 }
