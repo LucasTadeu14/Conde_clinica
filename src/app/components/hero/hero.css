@@ -3,38 +3,29 @@
   background-color: #C9B9AC;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
-.image{
-  max-height: 700px;
-
-  position: absolute;
-  top: 275px;
-}
-
-.element_1{
-  position: absolute;
-  top: 300px;
-  height: 70px;
-  margin-left: 50px;
-}
-
-.element_2{
-  position: absolute;
-  height: 700px;
-  top: 260px;
-  margin-left: 0px;
-}
 
 .hero{
-  width: 1200px;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 145px 20px 0 20px;
+  z-index: 10;
 }
 
-.hero img{
-  position: absolute;
-  top: 350px;
+.logo{
+  max-height: 150px;
+  margin-top: 110px;
+}
+
+.image_hero_1{
+  max-height: 700px;
 }
 
 .barra{
@@ -49,13 +40,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 800px;
+
+  position: relative;
+  bottom: 175px;
 }
 
 .barra-centro{
   display: flex;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: 20px;
 
   gap: 3rem;
@@ -74,18 +67,17 @@
 }
 
 .hero_section_2{
-  position: absolute;
-  top: 1000px;
-
   max-height: 800px;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1100px;
+  
   display: flex;
   flex-direction: row;
   gap: 5rem;
 }
 
 .hero_section_2 img{
-  margin-top: 60px;
+  margin-top: 40px;
   border-radius: 20px;
 }
 
@@ -162,45 +154,141 @@
 
 
 @media (max-width: 1200px) {
-  .image{
+  .hero_section{
+    height: 1600px;
+  }
+
+  .hero{
+    max-width: 1000px;
+  }
+
+  .logo{
+    max-height: 100px;
+    margin: 0;
+  }
+
+  .image_hero_1{
     max-height: 500px;
-    top: 375px;
-    right: 50px;
-    z-index: 1;
   }
 
-  .hero img{
-    height: 100px;
-    left: 100px;
-  }
-
-  .barra{
-    top: 700px;
-  }
-
-  .element_1{
-    height: 50px;
-    right: 400px;
-    top: 420px;
-  }
-
-  .element_2{
-    height: 500px;
-    top: 350px;
-    right: 50px;
+  .barra-centro{
+    max-width: 1000px;
   }
 
   .barra-centro div{
-    font-size: 12px;
+    font-size: small;
   }
 
   .hero_section_2{
-    width: 950px;
-    max-height: 800px;
+    max-width: 1000px;
   }
 
-  .hero_section_2 img{
-    width: 400px;
+  .hero_2 p{
+    max-width: 500px;
   }
 
+  .hero_2 img{
+    width: 450px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero{
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 0 20px;
+  }
+
+  .image_hero_1{
+    margin-top: 30px;
+  }
+
+  .barra{
+    height: 150px;
+    bottom: 0;
+  }
+
+  .barra-centro{
+    justify-content: center;
+    margin-right: 70px;
+  }
+
+  .hero_2{
+    margin-top: 50px;
+    align-items: center;
+
+    text-align: center;
+  }
+
+.hero_2 p{
+  max-width: 500px;
+}
+
+  .hero_section_2{
+    justify-content: center;
+  }
+
+  .hero_section_2 > img{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero_section{
+    height: 1300px;
+  }
+
+  .hero{
+    max-width: 400px;
+  }
+
+  .logo{
+    max-height: 80px;
+  }
+
+  .image_hero_1{
+    max-height: 300px;
+  }
+
+  .barra{
+    height: 120px;
+  }
+  .barra-centro{
+    margin-right: 20px;
+  }
+
+  .barra-centro div{
+    font-size: x-small;
+    gap: 0.5rem;
+  }
+
+  .barra-centro img{
+    height: 30px;
+  }
+
+  .hero_2{
+    max-width: 400px;
+    margin: 0;
+    padding: 50px 20px 20px 20px;
+  }
+
+  .hero_2 h1{
+    font-size: 60px;
+  }
+
+  .hero_2 p{
+    max-width: 400px;
+  }
+
+  .hero_2 button,
+  .hero_2 .agendar-button{
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .hero_2 img{
+    width: 300px;
+  }
 }

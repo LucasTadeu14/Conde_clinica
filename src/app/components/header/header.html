@@ -1,19 +1,74 @@
-<header class="header">
-  <nav class="nav-header">
-  
-    <a (click)="scrollToTop()" style="cursor: pointer;">
-      <img class="logo" src="assets/conde.png" alt="Foto" height="30px">
-    </a>
-  
-    <div class="nav-link">
-      <a (click)="scrollToTop()">Home</a>
-      <a (click)="scrollToSection('services')">Serviços</a>
-      <a (click)="scrollToSection('about')">Sobre nós</a>
-      <a (click)="scrollToSection('results')">Resultados</a>
-      <a (click)="scrollToSection('contact')">Contato</a>
+<header class="header" [class.menu-open]="isMenuOpen()" role="banner">
+  <nav class="nav-header" aria-label="Navegação principal">
+
+    <div class="nav-container">
+
+      <a
+        class="logo-link"
+        (click)="scrollToTop(); closeMenu()"
+        role="button"
+        tabindex="0"
+        (keydown.enter)="scrollToTop(); closeMenu()"
+      >
+        <img class="logo" src="assets/conde.png" alt="Conde Clínica - Logo" height="30">
+      </a>
+
+      <div class="nav-links-desktop">
+        <a (click)="scrollToSection('home'); closeMenu()">Home</a>
+        <a (click)="scrollToSection('services'); closeMenu()">Serviços</a>
+        <a (click)="scrollToSection('about'); closeMenu()">Sobre nós</a>
+        <a (click)="scrollToSection('results'); closeMenu()">Resultados</a>
+        <a (click)="scrollToSection('contact'); closeMenu()">Contato</a>
+      </div>
+
+      <a
+        href="https://wa.me/5561991728260"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-agendar btn-agendar-desktop"
+      >
+        Agendar
+      </a>
+
+      <button
+        class="hamburger-btn"
+        type="button"
+        [attr.aria-label]="isMenuOpen() ? 'Fechar menu' : 'Abrir menu'"
+        [attr.aria-expanded]="isMenuOpen()"
+        (click)="toggleMenu()"
+        #hamburgerBtn
+      >
+        <span class="hamburger-line hamburger-line-1"></span>
+        <span class="hamburger-line hamburger-line-2"></span>
+        <span class="hamburger-line hamburger-line-3"></span>
+      </button>
     </div>
-  
-    <a href="https://wa.me/5561991728260" target="_blank" rel="noopener noreferrer" class="agendar-button">Agendar</a>
-  
   </nav>
+
+  <div
+    class="menu-overlay"
+    [class.visible]="isMenuOpen()"
+    (click)="closeMenu()"
+    role="button"
+    tabindex="-1"
+    aria-hidden="true"
+  ></div>
+
+  <div class="menu-mobile" [class.open]="isMenuOpen()" role="navigation" aria-label="Menu mobile">
+    <div class="menu-mobile-inner">
+      <a (click)="scrollToSection('home'); closeMenu()">Home</a>
+      <a (click)="scrollToSection('services'); closeMenu()">Serviços</a>
+      <a (click)="scrollToSection('about'); closeMenu()">Sobre nós</a>
+      <a (click)="scrollToSection('results'); closeMenu()">Resultados</a>
+      <a (click)="scrollToSection('contact'); closeMenu()">Contato</a>
+      <a
+        href="https://wa.me/5561991728260"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-agendar btn-agendar-mobile"
+      >
+        Agendar
+      </a>
+    </div>
+  </div>
 </header>
