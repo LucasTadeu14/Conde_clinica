@@ -176,7 +176,8 @@
   right: 0;
   width: min(85%, 20rem);
   max-width: 20rem;
-  height: 100vh;
+  min-height: 100dvh;
+  height: 100%;
   background-color: #756d66;
   z-index: 999;
   transform: translateX(100%);

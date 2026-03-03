@@ -75,3 +75,21 @@
   line-height: 1;
 }
 
+@media (max-width: 558px) {
+  .image-wrapper{
+    height: auto;
+    min-height: 280px;
+    background: none;
+  }
+
+  .image-wrapper img{
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 450px) {
+  .results h1{
+    font-size: 40px;
+  }
+}
+
