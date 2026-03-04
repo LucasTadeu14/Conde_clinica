@@ -75,7 +75,7 @@ O sistema atende às seguintes demandas da clínica:
 
 ## 🚀 Deploy
 
-**Produção:** *(condeclinica.com)*
+**Produção:** *([condeclinica.com](https://condeclinica.com/))*
 
 ---
 
