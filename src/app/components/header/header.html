@@ -5,20 +5,21 @@
 
       <a
         class="logo-link"
-        (click)="scrollToTop(); closeMenu()"
+        href="#"
+        (click)="scrollToTop($event)"
         role="button"
         tabindex="0"
-        (keydown.enter)="scrollToTop(); closeMenu()"
+        (keydown.enter)="scrollToTop($event)"
       >
         <img class="logo" src="assets/conde.png" alt="Conde Clínica - Logo" height="30">
       </a>
 
       <div class="nav-links-desktop">
-        <a (click)="scrollToSection('home'); closeMenu()">Home</a>
-        <a (click)="scrollToSection('services'); closeMenu()">Serviços</a>
-        <a (click)="scrollToSection('about'); closeMenu()">Sobre nós</a>
-        <a (click)="scrollToSection('results'); closeMenu()">Resultados</a>
-        <a (click)="scrollToSection('contact'); closeMenu()">Contato</a>
+        <a href="#" (click)="scrollToSection('home', $event)">Home</a>
+        <a href="#" (click)="scrollToSection('services', $event)">Serviços</a>
+        <a href="#" (click)="scrollToSection('about', $event)">Sobre nós</a>
+        <a href="#" (click)="scrollToSection('results', $event)">Resultados</a>
+        <a href="#" (click)="scrollToSection('contact', $event)">Contato</a>
       </div>
 
       <a
@@ -56,11 +57,11 @@
 
   <div class="menu-mobile" [class.open]="isMenuOpen()" role="navigation" aria-label="Menu mobile">
     <div class="menu-mobile-inner">
-      <a (click)="scrollToSection('home'); closeMenu()">Home</a>
-      <a (click)="scrollToSection('services'); closeMenu()">Serviços</a>
-      <a (click)="scrollToSection('about'); closeMenu()">Sobre nós</a>
-      <a (click)="scrollToSection('results'); closeMenu()">Resultados</a>
-      <a (click)="scrollToSection('contact'); closeMenu()">Contato</a>
+      <a href="#" (click)="scrollToSection('home', $event)">Home</a>
+      <a href="#" (click)="scrollToSection('services', $event)">Serviços</a>
+      <a href="#" (click)="scrollToSection('about', $event)">Sobre nós</a>
+      <a href="#" (click)="scrollToSection('results', $event)">Resultados</a>
+      <a href="#" (click)="scrollToSection('contact', $event)">Contato</a>
       <a
         href="https://wa.me/5561991728260"
         target="_blank"
