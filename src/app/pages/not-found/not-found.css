@@ -1,0 +1,56 @@
+.not-found {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #FFF;
+}
+
+.not-found__content {
+  text-align: center;
+  max-width: 28rem;
+}
+
+.not-found__title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #756d66;
+  margin: 0;
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.not-found__message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #756d66;
+}
+
+.not-found__description {
+  color: #756d66;
+  margin: 0 0 2rem;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.8;
+}
+
+.not-found__link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #756d66;
+  color: white;
+  text-decoration: none;
+  border-radius: 2.5rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.not-found__link:hover {
+  background-color: #c9b9ac;
+  transform: translateY(-1px);
+}

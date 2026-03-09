@@ -15,11 +15,11 @@
       </a>
 
       <div class="nav-links-desktop">
-        <a href="#" (click)="scrollToSection('home', $event)">Home</a>
-        <a href="#" (click)="scrollToSection('services', $event)">Serviços</a>
-        <a href="#" (click)="scrollToSection('about', $event)">Sobre nós</a>
-        <a href="#" (click)="scrollToSection('results', $event)">Resultados</a>
-        <a href="#" (click)="scrollToSection('contact', $event)">Contato</a>
+        <a href="#" (click)="scrollOrNavigate('home', $event)">Home</a>
+        <a href="#" (click)="scrollOrNavigate('services', $event)">Serviços</a>
+        <a href="#" (click)="scrollOrNavigate('about', $event)">Sobre nós</a>
+        <a href="#" (click)="scrollOrNavigate('results', $event)">Resultados</a>
+        <a href="#" (click)="scrollOrNavigate('contact', $event)">Contato</a>
       </div>
 
       <a
@@ -57,11 +57,11 @@
 
   <div class="menu-mobile" [class.open]="isMenuOpen()" role="navigation" aria-label="Menu mobile">
     <div class="menu-mobile-inner">
-      <a href="#" (click)="scrollToSection('home', $event)">Home</a>
-      <a href="#" (click)="scrollToSection('services', $event)">Serviços</a>
-      <a href="#" (click)="scrollToSection('about', $event)">Sobre nós</a>
-      <a href="#" (click)="scrollToSection('results', $event)">Resultados</a>
-      <a href="#" (click)="scrollToSection('contact', $event)">Contato</a>
+      <a href="#" (click)="scrollOrNavigate('home', $event)">Home</a>
+      <a href="#" (click)="scrollOrNavigate('services', $event)">Serviços</a>
+      <a href="#" (click)="scrollOrNavigate('about', $event)">Sobre nós</a>
+      <a href="#" (click)="scrollOrNavigate('results', $event)">Resultados</a>
+      <a href="#" (click)="scrollOrNavigate('contact', $event)">Contato</a>
       <a
         href="https://wa.me/5561991728260"
         target="_blank"

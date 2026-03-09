@@ -1,4 +1,5 @@
 import { Component, signal, effect, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { Component, signal, effect, HostListener } from '@angular/core';
 export class Header {
   readonly menuOpen = signal(false);
 
-  constructor() {
+  constructor(private router: Router) {
  
     effect(() => {
       const open = this.menuOpen();
@@ -29,17 +30,23 @@ export class Header {
     return this.menuOpen();
   }
 
-  scrollToSection(sectionId: string, event?: Event): void {
+  scrollOrNavigate(sectionId: string, event?: Event): void {
     if (event) {
       event.preventDefault();
     }
     this.closeMenu();
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 0);
+    const url = this.router.url.split('?')[0];
+    const isHome = url === '/' || url === '';
+    if (isHome) {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 0);
+    } else {
+      this.router.navigate(['/'], { fragment: sectionId });
+    }
   }
 
   scrollToTop(event?: Event): void {
@@ -47,9 +54,15 @@ export class Header {
       event.preventDefault();
     }
     this.closeMenu();
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 0);
+    const url = this.router.url.split('?')[0];
+    const isHome = url === '/' || url === '';
+    if (isHome) {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 0);
+    } else {
+      this.router.navigate(['/']);
+    }
   }
 
   @HostListener('document:keydown.escape')

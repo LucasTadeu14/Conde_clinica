@@ -1,0 +1,1 @@
+import{Ga as i,Ha as n,Pa as o,sa as s}from"./chunk-YQZPUAIE.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=s({type:t,selectors:[["app-services"]],decls:2,vars:0,template:function(e,a){e&1&&(i(0,"p"),o(1,"services works!"),n())},encapsulation:2})};export{c as Services};

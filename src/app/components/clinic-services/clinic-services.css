@@ -33,6 +33,8 @@
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card img:hover{

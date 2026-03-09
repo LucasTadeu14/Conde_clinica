@@ -120,7 +120,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-YDP4JH5S.js";
+} from "./chunk-PWLKXUES.js";
 
 // node_modules/@angular/common/fesm2022/_platform_location-chunk.mjs
 var _DOM = null;
@@ -8696,4 +8696,4 @@ export {
   provideClientHydration,
   VERSION2 as VERSION
 };
-//# sourceMappingURL=chunk-WE5632T4.js.map
+//# sourceMappingURL=chunk-VRPLEZMX.js.map

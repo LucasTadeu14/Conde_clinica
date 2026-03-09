@@ -1,0 +1,15 @@
+@if (service) {
+  <section class="service-detail">
+    <a routerLink="/" class="service-detail__back-link">← Voltar</a>
+    <h1 class="service-detail__title">{{ service.name }}</h1>
+    <img [src]="service.image_2" [alt]="service.name" class="service-detail__image">
+    <div class="service-detail__content">
+      <p class="service-detail__description">{{ service.description }}</p>
+    </div>
+  </section>
+} @else {
+  <section class="service-detail service-detail--not-found">
+    <p class="service-detail__message">Serviço não encontrado.</p>
+    <a routerLink="/" class="service-detail__back-link">Voltar ao início</a>
+  </section>
+}

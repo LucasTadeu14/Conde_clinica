@@ -2,5 +2,6 @@ export interface Card {
   id: number;
   name: string;
   description: string;
-  image: string;
+  image_1: string;
+  image_2: string;
 }
