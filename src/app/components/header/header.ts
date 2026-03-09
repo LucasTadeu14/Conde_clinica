@@ -1,9 +1,5 @@
 import { Component, signal, effect, HostListener } from '@angular/core';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 @Component({
   selector: 'app-header',
   imports: [],
@@ -11,18 +7,10 @@ import { Component, signal, effect, HostListener } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-<<<<<<< HEAD
   readonly menuOpen = signal(false);
 
   constructor() {
  
-=======
-
-  readonly menuOpen = signal(false);
-
-  constructor() {
-
->>>>>>> main
     effect(() => {
       const open = this.menuOpen();
       document.body.style.overflow = open ? 'hidden' : '';
